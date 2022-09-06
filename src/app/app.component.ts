@@ -13,4 +13,9 @@ export class AppComponent {
   OpenRightSide() {
     this.panelWidth = '300px' ;
   }
+
+  setPanelWidth(e:any) {
+    this.panelWidth = e.target.value 
+
+  }
 }

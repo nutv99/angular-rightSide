@@ -1,9 +1,12 @@
 import {
   Component,
   Input,
+  Output,
   ViewChild,
   ElementRef,
   OnInit,
+  HostListener,
+  EventEmitter,
   AfterViewInit,
   SimpleChanges,
 } from '@angular/core';
@@ -19,6 +22,7 @@ export class SidePanelComponent implements OnInit,AfterViewInit {
   @Input() sCaption: string = '';
   @Input() panelWidth: string ='';
   @ViewChild('myPanel') myPanel: ElementRef;
+  @Output() outputPanelWidth = new EventEmitter<string>();
 
   constructor() {}
 
@@ -40,7 +44,9 @@ export class SidePanelComponent implements OnInit,AfterViewInit {
 
   ClosePanel() {
     //this.myPanel.nativeElement.classList.add('otherclass');
-    this.panelWidth = '0px' ;
+    let sValue = '0px' ;
+    this.panelWidth = '0px;' ;
+    this.outputPanelWidth.emit('0px');
     //this.myPanel.nativeElement.style.width= '10px'
     //this.myPanel.nativeElement.classList.add("otherclass");
   }

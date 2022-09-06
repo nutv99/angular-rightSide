@@ -4,6 +4,10 @@
 </p>
 <button (click)='OpenRightSide()'>Open RightSide</button>
 
-<app-side-panel [panelWidth]="panelWidth" [sCaption]="'My Panel'"></app-side-panel>
+<app-side-panel 
+[panelWidth]="panelWidth" 
+[sCaption]="'My Panel'"  
+(outPutPanelwidth) = "setPanelWidth($event)"
+></app-side-panel>
 
 PanelWidth :: {{panelWidth}}
