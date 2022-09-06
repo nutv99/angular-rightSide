@@ -8,9 +8,9 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
+  panelWidth = 20
 
   OpenRightSide() {
-
-    
+    this.panelWidth = 200 ;
   }
 }

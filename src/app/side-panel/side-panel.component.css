@@ -1,14 +1,16 @@
 .rightSidePanel {
   position:fixed ;
-  width:300px; 
+  width:0px; 
   height:100vh;
   top:0px; 
   right:0px;
   background-color: red;
+  transition: width 8s;
 
 }
 
 .otherclass {
   background-color: blue ;
-  transition: width 8s;
+  width: 0px;
+  transition: width 2s;
 }
