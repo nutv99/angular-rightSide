@@ -8,14 +8,15 @@ import { SidePanelComponent } from './side-panel/side-panel.component';
 })
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
-  panelWidth :string ='150px';
+  panelWidth: string = '150px';
 
   OpenRightSide() {
-    this.panelWidth = '300px' ;
+    this.panelWidth = '300px';
   }
 
-  setPanelWidth(e:any) {
-    this.panelWidth = e.target.value 
-
+  setPanelWidth(e: any) {
+    //alert(e.target.value)
+    console.log(e);
+    this.panelWidth = e;
   }
 }

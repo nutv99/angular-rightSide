@@ -9,7 +9,8 @@ import {
   EventEmitter,
   AfterViewInit,
   SimpleChanges,
-} from '@angular/core';
+} from '@angular/core' ; 
+
 
 @Component({
   selector: 'app-side-panel',
@@ -21,6 +22,8 @@ export class SidePanelComponent implements OnInit,AfterViewInit {
 
   @Input() sCaption: string = '';
   @Input() panelWidth: string ='';
+  @Input() dataCode: string ='';
+
   @ViewChild('myPanel') myPanel: ElementRef;
   @Output() outputPanelWidth = new EventEmitter<string>();
 
