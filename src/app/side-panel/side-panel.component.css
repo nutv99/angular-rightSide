@@ -5,7 +5,7 @@
   top: 0px;
   right: 0px;
 
-  background-color: whitesmoke;
+  background-color: white;
   /* transition: width 2s; */
 }
 
@@ -21,5 +21,30 @@
   height: 25px;
 }
 .caption {
-  margin-left:20px;
+  margin-left: 20px;
+}
+
+.thumbNail {
+  width: 100px;
+  border: 1px solid whitesmoke;
+  margin: 20px;
+  border-radius: 6px;
+  /* box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%); */
+  cursor: pointer;
+  justify-content: center;
+  color: gray;
+  padding: 5px;
+}
+.thumbNail:hover {
+  color: blue;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 1px 2px rgb(0 0 0 / 23%);
+}
+
+.hide {
+  display: none;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
 }

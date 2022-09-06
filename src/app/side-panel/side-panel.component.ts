@@ -23,11 +23,14 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
   @Input() sCaption: string = '';
   @Input() panelWidth: string = '';
   @Input() dataCode: string = '';
+  @Output() outputPanelWidth = new EventEmitter<string>();
+  @ViewChild('myPanel') myPanel: ElementRef;
+  
 
   dataResult: any = {};
+  dataSelected: string = '';
 
-  @ViewChild('myPanel') myPanel: ElementRef;
-  @Output() outputPanelWidth = new EventEmitter<string>();
+  
 
   constructor(private myhttp: HttpClient) {}
 
@@ -45,7 +48,7 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
         this.dataResult = data;
       });
   }
-  
+
 
   ngAfterViewInit() {
     // this.myPanel.nativeElement.innerHTML = "I am changed by ElementRef & ViewChild";
@@ -64,5 +67,10 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
     this.outputPanelWidth.emit('0px');
     //this.myPanel.nativeElement.style.width= '10px'
     //this.myPanel.nativeElement.classList.add("otherclass");
+  }
+
+  setSeleced(sValue) {
+    this.dataSelected = sValue ;
+
   }
 }

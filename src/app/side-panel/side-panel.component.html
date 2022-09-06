@@ -14,9 +14,30 @@
       <button (click)="ClosePanel()">Close</button>
     </div>
   </div>
+  <div style='background-color:lightgrey;padding:5px;height:30px'>ข้อมูลที่เลือก {{ dataSelected }}</div>
 
-  RightSidePanel width:{{ panelWidth }}
+  <!-- RightSidePanel width:{{ panelWidth }} -->
 
-  <hr />
-  {{ dataResult | json }}
+  <div style="display:flex; flex-wrap: wrap;justify-content:center;" >
+    <div class="thumbNail" *ngFor="let result of dataResult" (click)="setSeleced(result.departmentDesc)">
+      <div
+        style="height:100px;overflow:hidden;border-bottom:1px solid lightgrey"
+      >
+        <img
+          src="{{ result.imageName }}"
+          alt=""
+          width="100px"
+          style="border-radius:6px"
+          class="myDIV"
+        />
+      </div>
+      <div
+        style="padding:10px;font-size:16px;text-align:center"
+        (click)="setSeleced(result.departmentDesc)"
+      >
+        {{ result.departmentDesc }}
+      </div>
+      <div class="hide">I am shown when someone hovers over the div above.</div>
+    </div>
+  </div>
 </div>
