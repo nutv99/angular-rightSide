@@ -20,6 +20,7 @@
   padding: 10px;
   height: 25px;
   cursor: pointer;
+  font-weight: bolder;
 }
 .caption {
   margin-left: 20px;

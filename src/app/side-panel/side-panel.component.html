@@ -9,17 +9,23 @@
       />
     </div>
 
-    <div class="caption"><h3>{{ sCaption }}</h3></div>
+    <div class="caption">{{ sCaption }}</div>
     <div style="margin-left:auto">
       <button (click)="ClosePanel()">Close</button>
     </div>
   </div>
-  <div style='background-color:lightgrey;padding:5px;height:30px;color:white'>ข้อมูลที่เลือก :: {{ dataSelected }}</div>
+  <div style="background-color:lightgrey;padding:5px;height:30px;color:white">
+    ข้อมูลที่เลือก :: {{ dataSelected }}
+  </div>
 
   <!-- RightSidePanel width:{{ panelWidth }} -->
 
-  <div style="display:flex; flex-wrap: wrap;justify-content:center;" >
-    <div class="thumbNail" *ngFor="let result of dataResult" (click)="setSeleced(result.departmentDesc)">
+  <div style="display:flex; flex-wrap: wrap;justify-content:center;">
+    <div
+      class="thumbNail"
+      *ngFor="let result of dataResult"
+      (click)="setSeleced(result.departmentDesc)"
+    >
       <div
         style="height:100px;overflow:hidden;border-bottom:1px solid lightgrey"
       >
