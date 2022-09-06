@@ -13,9 +13,11 @@ import {
   templateUrl: './side-panel.component.html',
   styleUrls: ['./side-panel.component.css'],
 })
+
 export class SidePanelComponent implements OnInit,AfterViewInit {
+
   @Input() sCaption: string = '';
-  @Input() panelWidth: string ;
+  @Input() panelWidth: string ='';
   @ViewChild('myPanel') myPanel: ElementRef;
 
   constructor() {}
@@ -30,14 +32,15 @@ export class SidePanelComponent implements OnInit,AfterViewInit {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
+    
     // this.myPanel.nativeElement.style.width = this.panelWidth ;
-    this.myPanel.nativeElement.style.width = '350px' ;
-    // alert('changes')
+    //this.myPanel.nativeElement.style.width = '350px' ;
+     
   }
 
   ClosePanel() {
-    this.myPanel.nativeElement.classList.add('otherclass');
+    //this.myPanel.nativeElement.classList.add('otherclass');
+    this.panelWidth = '0px' ;
     //this.myPanel.nativeElement.style.width= '10px'
     //this.myPanel.nativeElement.classList.add("otherclass");
   }
