@@ -17,10 +17,14 @@ panelWidth : number  = 200 ;
   }
 
   ngAfterViewInit() {
-    this.myPanel.nativeElement.innerHTML = "I am changed by ElementRef & ViewChild";
+    // this.myPanel.nativeElement.innerHTML = "I am changed by ElementRef & ViewChild";
    // this.myPanel.nativeElement.style.width= '600px'
 
 
+  } 
+
+  ClosePanel() {
+    this.myPanel.nativeElement.style.width= '10px'
   }
 
 }
