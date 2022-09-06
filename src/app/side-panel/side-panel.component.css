@@ -1,16 +1,25 @@
 .rightSidePanel {
-  position:fixed ;
-  width:0px; 
-  height:100vh;
-  top:0px; 
-  right:0px;
-  background-color: red;
-  /* transition: width 2s; */
+  position: fixed;
+  width: 0px;
+  height: 100vh;
+  top: 0px;
+  right: 0px;
 
+  background-color: whitesmoke;
+  /* transition: width 2s; */
 }
 
 .otherclass {
-  background-color: blue ;
+  background-color: blue;
   width: 0px;
   transition: width 2s;
+}
+.captionPanel {
+  display: flex;
+  background: lightgreen;
+  padding: 10px;
+  height: 25px;
+}
+.caption {
+  margin-left:20px;
 }

@@ -1,8 +1,22 @@
 <div #myPanel class="rightSidePanel" style="width:{{ panelWidth }}">
-  <button (click)="ClosePanel()">Close</button>
+  <div class="captionPanel">
+    <div>
+      <img
+        src="https://www.pngall.com/wp-content/uploads/12/Left-Arrow-PNG-Images.png"
+        alt=""
+        height="20"
+        (click)="ClosePanel()"
+      />
+    </div>
+
+    <div class="caption">{{ sCaption }}</div>
+    <div style="margin-left:auto">
+      <button (click)="ClosePanel()">Close</button>
+    </div>
+  </div>
+
   RightSidePanel width:{{ panelWidth }}
 
-  {{ sCaption }}
   <hr />
   {{ dataResult | json }}
 </div>
