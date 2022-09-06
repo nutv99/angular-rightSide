@@ -32,13 +32,20 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
   constructor(private myhttp: HttpClient) {}
 
   ngOnInit() {
+    // this.myhttp
+    //   .get<any>('https://lovetoshopmall.com/dataservice/categoryTest.php')
+    //   .subscribe((result) => {
+    //     this.dataResult = result;
+    //     console.log('Result', result[0].value);
+    //   });
     this.myhttp
       .get<any>('https://lovetoshopmall.com/dataservice/categoryTest.php')
-      .subscribe((result) => {
-        this.dataResult = result;
-        console.log(result.value);
+      .subscribe((data) => {
+        // อ่านค่า result จาก JSON response ที่ส่งออกมา
+        this.dataResult = data;
       });
   }
+  
 
   ngAfterViewInit() {
     // this.myPanel.nativeElement.innerHTML = "I am changed by ElementRef & ViewChild";

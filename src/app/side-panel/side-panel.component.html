@@ -1,11 +1,8 @@
-<div #myPanel class='rightSidePanel' style='width:{{panelWidth}}'> 
- <button (click)="ClosePanel()"> Close</button>
-  RightSidePanel 
-  
-  width:{{panelWidth}}
-  
-  {{sCaption}}
-  <hr>
-  {{dataResult.value | json}}
-  
-</div>  
+<div #myPanel class="rightSidePanel" style="width:{{ panelWidth }}">
+  <button (click)="ClosePanel()">Close</button>
+  RightSidePanel width:{{ panelWidth }}
+
+  {{ sCaption }}
+  <hr />
+  {{ dataResult | json }}
+</div>
