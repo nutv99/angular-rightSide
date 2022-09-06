@@ -24,7 +24,9 @@ panelWidth : number  = 200 ;
   } 
 
   ClosePanel() {
-    this.myPanel.nativeElement.style.width= '10px'
+    this.myPanel.nativeElement.classList.add("otherclass");
+    //this.myPanel.nativeElement.style.width= '10px' 
+    //this.myPanel.nativeElement.classList.add("otherclass");
   }
 
 }

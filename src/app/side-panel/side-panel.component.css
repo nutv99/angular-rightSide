@@ -7,3 +7,8 @@
   background-color: red;
 
 }
+
+.otherclass {
+  background-color: blue ;
+  transition: width 2s;
+}
