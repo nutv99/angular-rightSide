@@ -13,16 +13,15 @@ import {
   templateUrl: './side-panel.component.html',
   styleUrls: ['./side-panel.component.css'],
 })
-export class SidePanelComponent implements AfterViewInit {
+export class SidePanelComponent implements OnInit,AfterViewInit {
   @Input() sCaption: string = '';
-  @Input() panelWidth: number = 0;
+  @Input() panelWidth: string ;
   @ViewChild('myPanel') myPanel: ElementRef;
 
   constructor() {}
 
   ngOnInit() {
-    this.myPanel.nativeElement.innerHTML =
-      'I am changed by ElementRef & ViewChild';
+    
   }
 
   ngAfterViewInit() {
@@ -32,7 +31,8 @@ export class SidePanelComponent implements AfterViewInit {
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
-    this.myPanel.nativeElement.style.width = this.panelWidth ;
+    // this.myPanel.nativeElement.style.width = this.panelWidth ;
+    this.myPanel.nativeElement.style.width = '350px' ;
     // alert('changes')
   }
 
