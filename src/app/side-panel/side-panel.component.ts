@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-panel',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-panel.component.css']
 })
 export class SidePanelComponent implements OnInit {
+ @Input sCaption: string = '' ;  
+ 
+panelWidth : number  = 10 ;
 
   constructor() { }
 
