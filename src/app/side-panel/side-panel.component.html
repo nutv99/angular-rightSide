@@ -1,8 +1,7 @@
 <div #myPanel class="rightSidePanel" style="width:{{ panelWidth }}">
-
-
   <div class="captionPanel">
     <div>
+      Bag <i class="bi-globe"></i>End Bag
       <i class="fa-sharp fa-solid fa-house"></i>
       <img
         src="https://www.pngall.com/wp-content/uploads/12/Left-Arrow-PNG-Images.png"
@@ -13,12 +12,12 @@
     </div>
 
     <div class="caption">{{ sCaption }}</div>
-    <div class= 'flex' style="margin-left:auto">
+    <div class="flex" style="margin-left:auto">
       <img
         src="https://i7.uihere.com/icons/203/94/340/symbolic-data-matrix-466ab516b44bf1b8b107cb038028de0a.png"
         alt=""
         width="30"
-        (click)='setDisplayStyle(true)'
+        (click)="setDisplayStyle(true)"
       />
 
       <div style="margin-left:25px">
@@ -26,14 +25,16 @@
           src="https://icons.veryicon.com/png/o/miscellaneous/eva/list-outline-1.png"
           alt=""
           width="30"
-          (click)='setDisplayStyle(false)'
+          (click)="setDisplayStyle(false)"
         />
       </div>
 
       <button (click)="ClosePanel()" class="button">Close</button>
     </div>
   </div>
-  <div style="background-color:lightgrey;padding:5px;height:40px;color:white;display:flex;align-items:center">
+  <div
+    style="background-color:lightgrey;padding:5px;height:40px;color:white;display:flex;align-items:center"
+  >
     ข้อมูลที่เลือก :: {{ dataSelected }}
     <button (click)="ClosePanel()" class="button">ตกลง</button>
   </div>
@@ -91,5 +92,3 @@
   </div>
   <!-- </div> End Main Container -->
 </div>
-
-
