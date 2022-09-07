@@ -19,6 +19,7 @@ import { catchError, retry } from 'rxjs/operators';
   templateUrl: './side-panel.component.html',
   styleUrls: ['./side-panel.component.css'],
 })
+
 export class SidePanelComponent implements OnInit, AfterViewInit {
   @Input() sCaption: string = '';
   @Input() panelWidth: string = '';
