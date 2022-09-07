@@ -25,12 +25,9 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
   @Input() dataCode: string = '';
   @Output() outputPanelWidth = new EventEmitter<string>();
   @ViewChild('myPanel') myPanel: ElementRef;
-  
 
   dataResult: any = {};
   dataSelected: string = '';
-
-  
 
   constructor(private myhttp: HttpClient) {}
 
@@ -48,7 +45,6 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
         this.dataResult = data;
       });
   }
-
 
   ngAfterViewInit() {
     // this.myPanel.nativeElement.innerHTML = "I am changed by ElementRef & ViewChild";
@@ -69,8 +65,38 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
     //this.myPanel.nativeElement.classList.add("otherclass");
   }
 
-  setSeleced(sValue) {
-    this.dataSelected = sValue ;
+  setSeleced(sValue, divid, e: any) {
+    console.clear();
+    console.log('divid', divid);
+    this.dataSelected = sValue;
 
+    // const box = document.querySelectorAll('.thumbNail') as HTMLDivElement;
+    const box = document
+      .querySelectorAll('.thumbNailSelected')
+      .forEach((thisBox) => {
+        console.log(thisBox.id, ',', divid, 'Matched');
+        thisBox.classList.remove('thumbNailSelected');
+        // if (thisBox.id === divid) {
+        //   console.log(thisBox.id, ',', divid, 'Matched');
+        //   thisBox.classList.add('thumbNailSelected');
+        // } else {
+        //   console.log(thisBox.id, ',', divid, 'No-Matched');
+        //   thisBox.classList.remove('thumbNailSelected');
+        // }
+      });
+    const boxselected = document.querySelector('#' + divid) as HTMLDivElement;
+    boxselected.classList.add('thumbNailSelected');
+
+    // box[0].classList.add('thumbNailSelected');
+
+    // box.forEach(function (value) {
+    //   console.log(value.id);
+    //   box[i].classList.remove('thumbNailSelected');
+    // });
+
+    // for (let i = 0; i <= box.length - 1, i++; ) {
+    //   console.log('Box', i);
+    //   // box[i].classList.remove('thumbNailSelected');
+    // }
   }
 }
