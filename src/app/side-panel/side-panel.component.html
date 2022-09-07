@@ -24,9 +24,8 @@
     <div
       class="thumbNail"
       *ngFor="let result of dataResult"
-      id="{{result.departmentCode}}"    
-      #{{result.departmentCode}}
-      (click)="setSeleced(result.departmentDesc,result.departmentCode,$event)"
+      id="{{ result.departmentCode }}"
+      (click)="setSeleced(result.departmentDesc, result.departmentCode, $event)"
     >
       <div
         style="height:100px;overflow:hidden;border-bottom:1px solid lightgrey"
@@ -39,9 +38,7 @@
           class="myDIV"
         />
       </div>
-      <div
-        style="padding:10px;font-size:16px;text-align:center"        
-      >
+      <div style="padding:10px;font-size:16px;text-align:center">
         {{ result.departmentDesc }}
       </div>
       <div class="hide">I am shown when someone hovers over the div above.</div>
