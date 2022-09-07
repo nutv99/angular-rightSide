@@ -11,11 +11,11 @@
 
     <div class="caption">{{ sCaption }}</div>
     <div style="margin-left:auto">
-      <button (click)="ClosePanel()">Close</button>
+      <button (click)="ClosePanel()" class='button'>Close</button>
     </div>
   </div>
   <div style="background-color:lightgrey;padding:5px;height:30px;color:white">
-    ข้อมูลที่เลือก :: {{ dataSelected }}
+    ข้อมูลที่เลือก :: {{ dataSelected }} <button    (click)="ClosePanel()" class='button'>ตกลง</button>
   </div>
 
   <!-- RightSidePanel width:{{ panelWidth }} -->

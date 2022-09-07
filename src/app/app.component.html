@@ -2,6 +2,7 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+กลุ่มสินค้า <input type="text" (focus)='OpenRightSide()' [(ngModel)]='category'>
 <button (click)='OpenRightSide()'>Open RightSide</button>
 
 <app-side-panel 
@@ -9,7 +10,7 @@
 [sCaption]="'ตารางกลุ่มสินค้า'"  
 [dataCode]="'S0001'"  
 
-
+(mData) = "setDataSeleced($event)"
 (outputPanelWidth) = "setPanelWidth($event)"
 ></app-side-panel>
 

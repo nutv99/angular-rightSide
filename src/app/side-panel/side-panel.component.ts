@@ -24,6 +24,8 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
   @Input() panelWidth: string = '';
   @Input() dataCode: string = '';
   @Output() outputPanelWidth = new EventEmitter<string>();
+  @Output() mData = new EventEmitter<string>();
+
   @ViewChild('myPanel') myPanel: ElementRef;
 
   dataResult: any = {};
@@ -68,7 +70,8 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
   setSeleced(sValue, divid, e: any) {
     console.clear();
     console.log('divid', divid);
-    this.dataSelected = sValue;
+    this.dataSelected = sValue; 
+    this.mData.emit(sValue);
 
     // const box = document.querySelectorAll('.thumbNail') as HTMLDivElement;
     const box = document
