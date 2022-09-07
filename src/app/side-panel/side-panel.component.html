@@ -11,6 +11,22 @@
 
     <div class="caption">{{ sCaption }}</div>
     <div style="margin-left:auto">
+      <img
+        src="https://i7.uihere.com/icons/203/94/340/symbolic-data-matrix-466ab516b44bf1b8b107cb038028de0a.png"
+        alt=""
+        width="30"
+        (click)='setDisplayStyle(true)'
+      />
+
+      <div style="margin-left:25px">
+        <img
+          src="https://icons.veryicon.com/png/o/miscellaneous/eva/list-outline-1.png"
+          alt=""
+          width="30"
+          (click)='setDisplayStyle(false)'
+        />
+      </div>
+
       <button (click)="ClosePanel()" class="button">Close</button>
     </div>
   </div>

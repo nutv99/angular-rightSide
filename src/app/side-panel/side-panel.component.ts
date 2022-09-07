@@ -107,4 +107,8 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
     //   // box[i].classList.remove('thumbNailSelected');
     // }
   }
+
+  setDisplayStyle(styleMatrix:boolean) { 
+    this.ShowStyleMatrix = styleMatrix ;
+  }
 }
