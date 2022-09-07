@@ -1,6 +1,5 @@
 <div #myPanel class="rightSidePanel" style="width:{{ panelWidth }}">
-  
-<!-- <div class="captionPanel">
+  <div class="captionPanel">
     <div>
       <img
         src="https://www.pngall.com/wp-content/uploads/12/Left-Arrow-PNG-Images.png"
@@ -12,12 +11,14 @@
 
     <div class="caption">{{ sCaption }}</div>
     <div style="margin-left:auto">
-      <button (click)="ClosePanel()" class='button'>Close</button>
+      <button (click)="ClosePanel()" class="button">Close</button>
     </div>
   </div>
   <div style="background-color:lightgrey;padding:5px;height:30px;color:white">
-    ข้อมูลที่เลือก :: {{ dataSelected }} <button    (click)="ClosePanel()" class='button'>ตกลง</button>
+    ข้อมูลที่เลือก :: {{ dataSelected }}
+    <button (click)="ClosePanel()" class="button">ตกลง</button>
   </div>
+  <!--   
   <div style="display:flex; flex-wrap: wrap;justify-content:center;">
     <div
       class="thumbNail"
@@ -42,10 +43,16 @@
       <div class="hide">I am shown when someone hovers over the div above.</div>
     </div>
   </div> -->
-<!-- End Style Matrix -->
+  <!-- End Style Matrix -->
 
-<div>
-  
-</div>
+  <div
+    class="styleList"
+    *ngFor="let result of dataResult"
+    id="{{ result.departmentCode }}"
+    (click)="setSeleced(result.departmentDesc, result.departmentCode, $event)"
+  >
+    AAAA
+  </div>
 
+  <!-- </div> End Main Container -->
 </div>
