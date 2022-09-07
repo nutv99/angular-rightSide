@@ -9,7 +9,7 @@
   background-color: white;
   /* transition: width 2s; */
 }
-
+.flex { display:flex }
 .otherclass {
   background-color: blue;
   width: 0px;
