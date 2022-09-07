@@ -18,8 +18,12 @@
     ข้อมูลที่เลือก :: {{ dataSelected }}
     <button (click)="ClosePanel()" class="button">ตกลง</button>
   </div>
-  <!--   
-  <div style="display:flex; flex-wrap: wrap;justify-content:center;">
+  <!-- Matrix Style Start -->
+
+  <div
+    *ngIf="ShowStyleMatrix"
+    style="display:flex; flex-wrap: wrap;justify-content:center;"
+  >
     <div
       class="thumbNail"
       *ngFor="let result of dataResult"
@@ -42,16 +46,29 @@
       </div>
       <div class="hide">I am shown when someone hovers over the div above.</div>
     </div>
-  </div> -->
+  </div>
   <!-- End Style Matrix -->
 
-  <div
-    class="styleList"
-    *ngFor="let result of dataResult"
-    id="{{ result.departmentCode }}"
-    (click)="setSeleced(result.departmentDesc, result.departmentCode, $event)"
-  >
-    AAAA
+  <!-- List Style Start -->
+  <div *ngIf="!ShowStyleMatrix">
+    <div
+      class="styleList"
+      *ngFor="let result of dataResult"
+      id="{{ result.departmentCode }}"
+      (click)="setSeleced(result.departmentDesc, result.departmentCode, $event)"
+    >
+      <div style="width:100px">
+        <img
+          src="{{ result.imageName }}"
+          alt=""
+          height="40px"
+          style="border-radius:6px"
+          class="myDIV"
+        />
+      </div>
+
+      <div>{{ result.departmentDesc }}</div>
+    </div>
   </div>
 
   <!-- </div> End Main Container -->

@@ -21,10 +21,12 @@ import { catchError, retry } from 'rxjs/operators';
 })
 
 export class SidePanelComponent implements OnInit, AfterViewInit {
-  
+
   @Input() sCaption: string = '';
   @Input() panelWidth: string = '';
   @Input() dataCode: string = '';
+  @Input() ShowStyleMatrix: boolean = true;
+
   @Output() outputPanelWidth = new EventEmitter<string>();
   @Output() mData = new EventEmitter<string>();
 
@@ -73,7 +75,7 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
     console.clear();
     console.log('divid', divid);
     this.dataSelected = sValue; 
-    this.mData.emit(sValue);
+    this.mData.emit(sValue) ;
 
     // const box = document.querySelectorAll('.thumbNail') as HTMLDivElement;
     const box = document
