@@ -1,4 +1,4 @@
-# angular-ivy-9rztae
+# angular-ivy-RightSidePanel For Select PK,FK
 
 เป็น SidePanel ด้านขวา สำหรับเลือก ค่า fk ต่างๆ 
 
