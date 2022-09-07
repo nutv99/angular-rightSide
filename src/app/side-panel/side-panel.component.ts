@@ -88,9 +88,8 @@ export class SidePanelComponent implements OnInit, AfterViewInit {
         // }
       });    
 
-    const boxselected = document.querySelector('#' + divid) as HTMLDivElement;
-  
-    boxselected.classList.add('thumbNailSelected');
+    const boxselected = document.querySelector('#' + divid) as HTMLDivElement ;  
+    boxselected.classList.add('thumbNailSelected') ;
 
     // box[0].classList.add('thumbNailSelected');
 
