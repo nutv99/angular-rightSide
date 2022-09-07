@@ -1,35 +1,46 @@
 <div #myPanel class="rightSidePanel" style="width:{{ panelWidth }}">
   <div class="captionPanel">
     <div>
-      Bag <i class="bi-globe"></i>End Bag
-      <i class="fa-sharp fa-solid fa-house"></i>
-      <img
+      <!-- <img
         src="https://www.pngall.com/wp-content/uploads/12/Left-Arrow-PNG-Images.png"
         alt=""
         height="20"
         (click)="ClosePanel()"
-      />
+      /> -->
+      <i
+        style="font-size:26px"
+        class="fa fa-long-arrow-left"
+        aria-hidden="true"
+        (click)="ClosePanel()"
+      ></i>
     </div>
 
     <div class="caption">{{ sCaption }}</div>
     <div class="flex" style="margin-left:auto">
-      <img
-        src="https://i7.uihere.com/icons/203/94/340/symbolic-data-matrix-466ab516b44bf1b8b107cb038028de0a.png"
-        alt=""
-        width="30"
+      <i
+        class="fa fa-list"
+        style="margin-right:25px"
+        aria-hidden="true"
         (click)="setDisplayStyle(true)"
-      />
+      ></i>
+
+      <i
+        class="fa fa-calendar"
+        aria-hidden="true"
+        (click)="setDisplayStyle(false)"
+      ></i>
 
       <div style="margin-left:25px">
-        <img
+        <!-- <img
           src="https://icons.veryicon.com/png/o/miscellaneous/eva/list-outline-1.png"
           alt=""
           width="30"
           (click)="setDisplayStyle(false)"
-        />
+        /> -->
       </div>
 
-      <button (click)="ClosePanel()" class="button">Close</button>
+      <!-- <button (click)="ClosePanel()" class="button">Close</button> -->
+      <i class="fa fa-sign-out" aria-hidden="true" (click)="ClosePanel()" ></i>
     </div>
   </div>
   <div
