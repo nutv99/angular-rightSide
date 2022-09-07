@@ -21,6 +21,7 @@ import { catchError, retry } from 'rxjs/operators';
 })
 
 export class SidePanelComponent implements OnInit, AfterViewInit {
+  
   @Input() sCaption: string = '';
   @Input() panelWidth: string = '';
   @Input() dataCode: string = '';
